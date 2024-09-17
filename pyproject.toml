@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "qtrackpro"
+version = "0.1.0"
+description = "QTrackPro application"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+supabase = "^1.0.3"
+streamlit = "^1.22.0"
+python-dotenv = "^1.0.0"
+plotly = "^5.14.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
