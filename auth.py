@@ -14,7 +14,7 @@ def login(supabase: Client):
             response = supabase.auth.sign_in_with_password({"email": email, "password": password})
             st.session_state.user = response.user
             st.success("Logged in successfully!")
-            st.rerun()  # Changed from st.experimental_rerun()
+            st.experimental_rerun()  # Changed from st.rerun()
         except Exception as e:
             st.error(f"Error logging in: {str(e)}")
 

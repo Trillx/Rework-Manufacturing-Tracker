@@ -35,7 +35,7 @@ def manage_companies(supabase: Client):
                             st.session_state.company_id = company['id']
                             st.session_state.company_name = company['name']
                             st.success(f"Selected company: {company['name']}")
-                            st.rerun()
+                            st.experimental_rerun()  # Changed from st.rerun()
             else:
                 st.info("No companies found.")
         else:
