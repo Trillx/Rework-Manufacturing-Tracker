@@ -52,7 +52,7 @@ def main():
             if st.sidebar.button("Change Company"):
                 st.session_state.company_id = None
                 st.session_state.company_name = None
-                st.rerun()
+                st.experimental_rerun()
             else:
                 pages = ["Dashboard", "Manage Parts", "Manage Rework"]
                 st.session_state.current_page = st.sidebar.radio("Go to", pages, index=pages.index(st.session_state.current_page))
@@ -73,7 +73,7 @@ def main():
             st.session_state.company_id = None
             st.session_state.company_name = None
             st.session_state.current_page = "Dashboard"
-            st.rerun()
+            st.experimental_rerun()
 
 if __name__ == "__main__":
     main()
